@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Project</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" >
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Project name</th>
+            <th>Cost</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let project of projects" class="text-center">
+            <td>{{project.id}}</td>
+            <td>{{project.name}}</td>
+            <td>{{project.cost}}</td>
+            <td>
+              <button (click)="Edit(project)" class="btn btn-warning">Edit</button>
+              <button (click)="Delete(projects)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
